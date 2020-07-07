@@ -74,4 +74,26 @@ sudo npm install -g serve			// serve라는 프로그램 설치
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+2-2 (실습) JSX 코드 작성해보기
 
+src/index.js
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')		//root라는 id를 가진 엘리먼트에 app이라는 컴포넌트를 렌더링
+);
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
+
+기본형태
