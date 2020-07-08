@@ -1,0 +1,29 @@
+4강 Component 와 Props
+
+4-1 Components와 Props
+
+Components?
+구성요소라는 뜻을 가지고있음.
+
+Component-Based 
+리액트는 컴포넌트 기반 이다.
+레고 블록 조립하듯 컴포넌트들을 모아서 개발
+
+Components의 특징
+
+Javascript의 function과 비슷하다고 보면된다.
+입력을 받아서 출력을 내뱉음
+그런데 Components에게 입력은 Props이다. 출력은 React element이다.
+
+프롭스는 밀가루 컴포넌트는 붕어빵틀 엘리먼트는 밀가루 넣고 만들어진 실제 붕어빵
+
+Props란?
+Property를 줄여서 씀, 속성 특성이라는 뜻임
+즉,Components의 속성이다.
+
+Props의 특징
+1. Read Only
+값을 변경할수없다.
+붕어빵을 다 구워졌는데, 속재료를 바꿀수 없다.
+
+2. Props를 직접 바꿀수없고, 같은 Props에 대해서는 항상 같은 결과를 보여줄것!
