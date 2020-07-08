@@ -27,3 +27,64 @@ Props의 특징
 붕어빵을 다 구워졌는데, 속재료를 바꿀수 없다.
 
 2. Props를 직접 바꿀수없고, 같은 Props에 대해서는 항상 같은 결과를 보여줄것!
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4-2 Component 만들기
+
+Component는 두가지 종류가있다.
+
+Function Components 와 Class Components
+
+1. Function Components
+그냥 쉽게 말해서 JavaScript function이다.
+
+fucntion Welcome(props){				// input으로 props가 들어가고
+  return <h1>Hello, {props.name}</h1>		// output으로 element가 나옴
+}
+
+2. Class Components
+가장 많이 쓰이는 형태 ES6에나오는 클래스 형태를 사용한다,
+
+class Welcome extends React.Component{
+  render(){
+    return <h1>Hello, {this.props.name}</h1>
+    }
+}
+
+Component이름은 항상 대문자로 시작해야 한다.
+예제
+HTML div태그로 인식					//DOM태그를 사용한 element
+cons element = <div />;
+
+Welcome이라는 React Component로 인식			//사용자가 정의한 Component를 사용한 element
+const element = <Welcome name="Sara" />;
+
+Component 렌더링
+
+function Welcome(props){					//props에 name:"Sara"를 넣음
+  return <h1>Hello, {props.name}</h1>;
+}
+
+const element = <Welcome name="Sara" />;		
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
+
+Component합성
+
+Component안에 또다른 Component사용가능
+
+
+
+
+
+
+
+
+
+
+
+
+
