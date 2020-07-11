@@ -1,0 +1,27 @@
+5강
+
+5-1 State and Lifecycle
+
+State-상태라는 의미
+React에서 State는 React component의 상태,React component의 데이터 component에 대한 변경 가능한 데이터
+
+State는 사용자가 정의
+렌더링할때, 데이터흐름에 사용되는 값들만을 State에 포함시켜야한다.
+그렇지않은데이터는 정적인 데이터로 관리
+
+그렇지 않으면 렌더링이 자주일어나고 무거워진다. 
+State는 Javascript 객체
+
+state는 직접 수정 할 수없다. (하면 안된다)
+수정할때는 setState함수만 사용해서 수정해야한다.
+
+Lifecycle-생명 주기라는 의미
+Component도 Lifecycle을 가지는데 이것을 Component Lifecycle이라고 한다.
+React component의 생명주기
+
+출생
+componentDidMount- 컴포넌트가 마운트(출생)되었음
+인생
+componentDidUpdate- 컴포넌트 업데이트 되었음
+사망
+componentWillUnmount- 컴포넌트가 사망할것이다.
