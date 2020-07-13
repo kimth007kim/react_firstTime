@@ -38,6 +38,7 @@ const styles = {
 
 class Comment extends React.Component {
   render() {
+    const { name, content } = this.props;
     return (
       <div style={styles.root}>
         <div style={styles.imageContainer}>

@@ -3,35 +3,45 @@ import logo from "./logo.svg";
 import "./App.css";
 import Comment from "./Comment";
 
-const comments = [
-  { name: "Tony Start", content: `"I am IronMan"` },
-  { name: "Peter Parker", content: `"A neighborhood with a kindness"` },
-];
+class App extends React.Component {
+  constructor(props) {
+    super(props);
 
-function App() {
-  return (
-    <div className="App" style={{ padding: 16, backgroundColor: "#282c34" }}>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <div>
-        {comments.map((comment, index) => {
-          return <Comment name={comment.name} content={comment.content} />;
-        })}
+    this.state = {
+      comments: [
+        { name: "김", content: "시작해보자" },
+        { name: "Tony Stark", content: "I am Iron Man" },
+        { name: "Thanos", content: "I'm inevitable" },
+      ],
+    };
+  }
+
+  render() {
+    const { comments } = this.state;
+    return (
+      <div className="App" style={{ padding: 16, backgroundColor: "#282c34" }}>
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </header>
+        <div>
+          {comments.map((comment, index) => {
+            return <Comment name={comment.name} content={comment.content} />;
+          })}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
