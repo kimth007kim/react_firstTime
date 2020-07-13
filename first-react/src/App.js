@@ -3,17 +3,36 @@ import logo from "./logo.svg";
 import "./App.css";
 import Comment from "./Comment";
 
+const commentsFromServer = [
+  { name: "김", content: "시작해보자" },
+  { name: "Tony Stark", content: "I am Iron Man" },
+  { name: "Thanos", content: "I'm inevitable" },
+];
+
+var timer;
+
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      comments: [
-        { name: "김", content: "시작해보자" },
-        { name: "Tony Stark", content: "I am Iron Man" },
-        { name: "Thanos", content: "I'm inevitable" },
-      ],
+      comments: [],
     };
+  }
+
+  componentDidMount() {
+    let comments = this.state.comments;
+    timer = setInterval(() => {
+      if (comments.length < commentsFromServer.length) {
+        let index = comments.length;
+        comments.push(commentsFromServer[index]);
+        this.setState({
+          comments: comments,
+        });
+      } else if (timer) {
+        clearInterval(timer);
+      }
+    }, 1000);
   }
 
   render() {

@@ -32,6 +32,7 @@ componentWillUnmount- 컴포넌트가 사망할것이다.
 
 실습 중
 
+Chrome: React Developer tool 설치하기
 
 
 

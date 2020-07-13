@@ -39,6 +39,7 @@ const styles = {
 class Comment extends React.Component {
   render() {
     const { name, content } = this.props;
+
     return (
       <div style={styles.root}>
         <div style={styles.imageContainer}>
@@ -48,8 +49,8 @@ class Comment extends React.Component {
           />
         </div>
         <div style={styles.commentContainer}>
-          <div style={styles.nameText}>{this.props.name}</div>
-          <span style={styles.contentText}>{this.props.content}</span>
+          <div style={styles.nameText}>{name}</div>
+          <span style={styles.contentText}>{content}</span>
         </div>
       </div>
     );
