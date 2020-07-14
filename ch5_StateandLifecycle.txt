@@ -30,9 +30,26 @@ componentWillUnmount- 컴포넌트가 사망할것이다.
 
 5-2 (실습) state 사용해보기
 
-실습 중
+실습 완료
 
 Chrome: React Developer tool 설치하기
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5-3 (실습) Component Lifecycle 살펴보기
+
+모르는 부분:
+
+Super를 왜 사용하는가: 결과적으로 보면 this를 사용하려고 사용하는것이다. 여기서 super는 React.Component를 지칭하게 된다.
 
 
+index.js:1 Warning: Each child in a list should have a unique "key" prop.
+
+Check the render method of `App`. See https://fb.me/react-warning-keys for more information.
+    in Comment (at App.js:58)
+    in App (at src/index.js:7)
+에러 발생시 id 값을 고유한 값을 주고
+
+life cycle method는 상당히 중요하다.
+
+실습 완료
